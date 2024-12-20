@@ -2,6 +2,30 @@
  * bank
  */
 public class bank {
+  public static void main(String[] args) {
+    PessoaFisica p1 = new PessoaFisica();
+
+    p1.setName("Gabriel");
+    p1.setSurname("Coelho Soares");
+    p1.setCPF("1234758890");
+    p1.setJobTitle("Developer");
+    p1.setMonthlySalary(2500);
+
+    bank account = new bank(112, 12371623, p1);
+    account.deposit(2500);
+
+    System.out.println(account.getOwner().getName() + " " + account.getOwner().getSurname());
+    System.out.println(account.getAgency() + " - numb. " + account.getNumber());
+    System.out.println(account.getAmount());
+  }
+
+  // Constructor
+  public bank(int agvalue, int numberValue, PessoaFisica ownerValue) {
+    this.agency = agvalue;
+    this.number = numberValue;
+    this.owner = ownerValue;
+  }
+
   private int agency;
   private int number;
   private PessoaFisica owner;
@@ -66,25 +90,5 @@ public class bank {
     } else {
       return false;
     }
-  }
-
-  public static void main(String[] args) {
-    bank account = new bank();
-    PessoaFisica p1 = new PessoaFisica();
-
-    p1.setName("Gabriel");
-    p1.setSurname("Coelho Soares");
-    p1.setCPF("1234758890");
-    p1.setJobTitle("Developer");
-    p1.setMonthlySalary(2500);
-
-    account.setOwner(p1);
-    account.setAgency(112);
-    account.setNumber(12709847);
-    account.deposit(2500);
-
-    System.out.println(account.getOwner().getName() + " " + account.getOwner().getSurname());
-    System.out.println(account.getAgency() + " - numb. " + account.getNumber());
-    System.out.println(account.getAmount());
   }
 }
