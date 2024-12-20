@@ -70,11 +70,21 @@ public class bank {
 
   public static void main(String[] args) {
     bank account = new bank();
+    PessoaFisica p1 = new PessoaFisica();
 
-    account.deposit(100);
-    account.withdraw(1500);
-    System.out.println(account.getAmount());
-    account.setAmount(-1500);
+    p1.setName("Gabriel");
+    p1.setSurname("Coelho Soares");
+    p1.setCPF("1234758890");
+    p1.setJobTitle("Developer");
+    p1.setMonthlySalary(2500);
+
+    account.setOwner(p1);
+    account.setAgency(112);
+    account.setNumber(12709847);
+    account.deposit(2500);
+
+    System.out.println(account.getOwner().getName() + " " + account.getOwner().getSurname());
+    System.out.println(account.getAgency() + " - numb. " + account.getNumber());
     System.out.println(account.getAmount());
   }
 }
