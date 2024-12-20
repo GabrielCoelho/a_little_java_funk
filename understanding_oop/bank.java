@@ -3,11 +3,7 @@
  */
 public class bank {
   public static void main(String[] args) {
-    PessoaFisica p1 = new PessoaFisica();
-
-    p1.setName("Gabriel");
-    p1.setSurname("Coelho Soares");
-    p1.setCPF("1234758890");
+    PessoaFisica p1 = new PessoaFisica("Gabriel", "Coelho Soares", "12347588890");
     p1.setJobTitle("Developer");
     p1.setMonthlySalary(2500);
 

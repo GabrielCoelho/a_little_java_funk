@@ -5,6 +5,13 @@ public class PessoaFisica {
   private String jobTitle;
   double monthlySalary;
 
+  // Constructor
+  public PessoaFisica(String nameValue, String surnameValue, String cpfValue) {
+    this.name = nameValue;
+    this.surname = surnameValue;
+    this.cpf = cpfValue;
+  }
+
   // Getters
 
   public String getName() {
