@@ -21,6 +21,16 @@ public class bank {
 
   }
 
+  boolean transfer(double value, bank destinyAccount) {
+    double v = this.withdraw(value);
+    if (v != 0) {
+      destinyAccount.amount += value;
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   public static void main(String[] args) {
     bank account = new bank();
 
@@ -40,5 +50,11 @@ public class bank {
     System.out.println(s);
 
     s = account.withdraw(2198347);
+
+    bank newTest = new bank();
+
+    account.transfer(3000, newTest);
+
+    System.out.println(newTest.amount);
   }
 }
