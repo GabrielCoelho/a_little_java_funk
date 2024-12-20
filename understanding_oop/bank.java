@@ -4,7 +4,7 @@
 public class bank {
   int agency;
   int number;
-  String ownerName;
+  PessoaFisica owner;
   double amount;
 
   void deposit(double newDeposit) {
@@ -33,17 +33,24 @@ public class bank {
 
   public static void main(String[] args) {
     bank account = new bank();
+    PessoaFisica p1 = new PessoaFisica();
+
+    p1.name = "Gabriel";
+    p1.cpf = "12345678900";
+    p1.surname = "Coelho Soares";
+    p1.jobTitle = "Developer";
+    p1.monthlySalary = 2500;
 
     account.agency = 112;
     account.number = 1287634;
-    account.ownerName = "Gabriel Coelho Soares";
+    account.owner = p1;
     account.amount = 8427.387;
 
-    System.out.println("Owner: " + account.ownerName + " \nAgency number: " + account.number + " \tAccount Number: "
+    System.out.println("Owner: " + account.owner.name + " \nAgency number: " + account.number + " \tAccount Number: "
         + account.number + "\nAmount stored: R$ " + account.amount);
 
     account.deposit(1500);
-    System.out.println("Owner: " + account.ownerName + " \nAgency number: " + account.number + " \tAccount Number: "
+    System.out.println("Owner: " + account.owner.name + " \nAgency number: " + account.number + " \tAccount Number: "
         + account.number + "\nAmount stored: R$ " + account.amount);
 
     double s = account.withdraw(300);
