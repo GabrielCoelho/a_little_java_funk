@@ -11,6 +11,16 @@ public class bank {
     this.amount += newDeposit;
   }
 
+  double withdraw(double value) {
+    if (this.amount < value) {
+      System.out.println("Insuficient founds");
+      return 0;
+    }
+    this.amount -= value;
+    return this.amount;
+
+  }
+
   public static void main(String[] args) {
     bank account = new bank();
 
@@ -26,5 +36,9 @@ public class bank {
     System.out.println("Owner: " + account.ownerName + " \nAgency number: " + account.number + " \tAccount Number: "
         + account.number + "\nAmount stored: R$ " + account.amount);
 
+    double s = account.withdraw(300);
+    System.out.println(s);
+
+    s = account.withdraw(2198347);
   }
 }
