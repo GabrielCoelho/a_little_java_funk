@@ -7,12 +7,13 @@ public class Main {
     AccountCurrent newAccountC = new AccountCurrent(1200, 10982347, ownerValue);
     AccountInvestment newAccountI = new AccountInvestment(1200, 10982348, ownerValue);
 
-    System.out.println(newAccountC.getOwner().getName() + " " + newAccountC.getOwner().getSurname());
-    newAccountC.deposit(2500);
-    System.out.println(newAccountC.getAmount());
+    newAccountC.deposit(1000);
+    newAccountI.deposit(10000);
 
-    System.out.println(newAccountI.getOwner().getName() + " " + newAccountI.getOwner().getSurname());
-    newAccountI.deposit(400);
-    System.out.println(newAccountI.getAmount());
+    newAccountC.withdraw(100);
+    newAccountI.withdraw(1000);
+
+    System.out.println("Current Account: R$ " + newAccountC.getAmount());
+    System.out.println("Investment Account: R$" + newAccountI.getAmount());
   }
 }
