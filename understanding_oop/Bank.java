@@ -1,22 +1,10 @@
 /**
  * bank
  */
-public class bank {
-  public static void main(String[] args) {
-    PessoaFisica p1 = new PessoaFisica("Gabriel", "Coelho Soares", "12347588890");
-    p1.setJobTitle("Developer");
-    p1.setMonthlySalary(2500);
-
-    bank account = new bank(112, 12371623, p1);
-    account.deposit(2500);
-
-    System.out.println(account.getOwner().getName() + " " + account.getOwner().getSurname());
-    System.out.println(account.getAgency() + " - numb. " + account.getNumber());
-    System.out.println(account.getAmount());
-  }
+public class Bank {
 
   // Constructor
-  public bank(int agvalue, int numberValue, PessoaFisica ownerValue) {
+  public Bank(int agvalue, int numberValue, PessoaFisica ownerValue) {
     this.agency = agvalue;
     this.number = numberValue;
     this.owner = ownerValue;
@@ -78,7 +66,7 @@ public class bank {
 
   }
 
-  public boolean transfer(double value, bank destinyAccount) {
+  public boolean transfer(double value, Bank destinyAccount) {
     double v = this.withdraw(value);
     if (v != 0) {
       destinyAccount.amount += value;
