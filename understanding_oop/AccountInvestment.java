@@ -7,4 +7,10 @@ public class AccountInvestment extends Bank {
     super(agvalue, numberValue, ownerValue);
   }
 
+  @Override
+  public void generateReport() {
+    // TODO Auto-generated method stub
+    System.out.println("Generating report...");
+  }
+
 }

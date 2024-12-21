@@ -75,4 +75,7 @@ public abstract class Bank {
       return false;
     }
   }
+
+  // Obriga as subclasses a sobrescrever este método
+  public abstract void generateReport();
 }

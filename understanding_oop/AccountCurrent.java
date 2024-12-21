@@ -19,4 +19,11 @@ public class AccountCurrent extends Bank {
     return "Account{" + "Agency: " + this.getAgency() + ", Number: " + this.getNumber() + ", Owner: " + this.getOwner()
         + "Amount: R$ " + this.getAmount() + "}";
   }
+
+  @Override
+  public void generateReport() {
+    // TODO Auto-generated method stub
+    System.out.println("Generating report...");
+  }
+
 }

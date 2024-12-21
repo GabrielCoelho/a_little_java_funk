@@ -14,5 +14,6 @@ public class Main {
     newAccountI.withdraw(1000);
 
     System.out.println(newAccountC);
+    newAccountC.generateReport();
   }
 }
