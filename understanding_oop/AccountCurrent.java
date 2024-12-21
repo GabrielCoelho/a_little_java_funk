@@ -13,4 +13,10 @@ public class AccountCurrent extends Bank {
     double newValue = value + 0.98;
     return super.withdraw(newValue);
   }
+
+  @Override
+  public String toString() {
+    return "Account{" + "Agency: " + this.getAgency() + ", Number: " + this.getNumber() + ", Owner: " + this.getOwner()
+        + "Amount: R$ " + this.getAmount() + "}";
+  }
 }

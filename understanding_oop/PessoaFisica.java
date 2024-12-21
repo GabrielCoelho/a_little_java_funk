@@ -56,4 +56,10 @@ public class PessoaFisica {
     this.monthlySalary = value;
   }
 
+  @Override
+  public String toString() {
+    return "PessoaFisica{ Name: " + this.getName() + ", Surname: " + this.getSurname() + ", CPF: " + this.getCPF()
+        + ", Job Title: " + this.getJobTitle() + ", Monthly Salary: R$ " + this.getMonthlySalary() + "}";
+  }
+
 }

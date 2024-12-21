@@ -1,7 +1,7 @@
 /**
- * bank
+ * Bank
  */
-public class Bank {
+public abstract class Bank {
 
   // Constructor
   public Bank(int agvalue, int numberValue, PessoaFisica ownerValue) {

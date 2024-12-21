@@ -13,7 +13,6 @@ public class Main {
     newAccountC.withdraw(100);
     newAccountI.withdraw(1000);
 
-    System.out.println("Current Account: R$ " + newAccountC.getAmount());
-    System.out.println("Investment Account: R$" + newAccountI.getAmount());
+    System.out.println(newAccountC);
   }
 }
